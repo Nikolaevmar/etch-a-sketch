@@ -3,6 +3,16 @@ const container = document.querySelector(`.gamepad`)
 const btnBlack = document.getElementById('black');
 const btnRGB = document.getElementById('rgb');
 const btnClear = document.getElementById('clear');
+const btnChangeSize = document.getElementById('cSize');
+
+const divSize = prompt('Enter a number between 4 and 32')
+
+if(divSize >= 4 && divSize <= 32){
+    createDivs(divSize,divSize)
+}else{
+    alert('Error, reloading the page...');
+    location.reload();
+}
 
 function createDivs(col , rows) {
     for(let i = 0;i < (col * rows); i++) {
@@ -13,7 +23,7 @@ function createDivs(col , rows) {
         container.appendChild(div).classList.add('box')
     }
 }
-createDivs(16,16)
+
 
 
 function blackColor(){
@@ -46,3 +56,10 @@ function clear() {
  })
 }
 clear()
+
+function changeSize(){
+    btnChangeSize.addEventListener('click', () => {
+        location.reload();
+    })
+}
+changeSize();
