@@ -4,7 +4,7 @@ const btnBlack = document.getElementById('black');
 const btnRGB = document.getElementById('rgb');
 const btnClear = document.getElementById('clear');
 
-function creatDivs(col , rows) {
+function createDivs(col , rows) {
     for(let i = 0;i < (col * rows); i++) {
         const div = document.createElement('div') 
         div.style.border= '1px solid black'
@@ -13,7 +13,7 @@ function creatDivs(col , rows) {
         container.appendChild(div).classList.add('box')
     }
 }
-creatDivs(16,16)
+createDivs(16,16)
 
 
 function blackColor(){
@@ -40,5 +40,9 @@ function rgbColor(){
 rgbColor();
 
 function clear() {
-
+ const boxes = container.querySelectorAll('.box');
+ btnClear.addEventListener('click', () => {
+     boxes.forEach(box => box.style.background='white');
+ })
 }
+clear()
