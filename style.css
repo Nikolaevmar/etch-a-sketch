@@ -1,11 +1,5 @@
 * {
-  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-}
-
-:root {
-  --grid-cols: 1;
-  --grid-rows: 1;
 }
 
 .wrapper {
@@ -23,6 +17,7 @@
 .title {
   font-size: 2.5em;
   color: white;
+  margin: 15px 0px 10px 0px;
 }
 
 .gamepad {
@@ -30,35 +25,17 @@
   display: grid;
   width: 500px;
   height: 500px;
-  margin-bottom: 10px;
   z-index: 100;
-}
-
-.userControl {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-bottom: 30px;
 }
 
 .buttons {
-  width: 100%;
   display: flex;
-  justify-content: space-around;
-  padding: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
-.userControl,
-#resetChoice,
-#colorChoice {
-  text-decoration: none;
-  border: 2px solid white;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 1em;
-  color: black;
-  font-weight: bolder;
-}
-
-input[type="range"] {
-  width: 50%;
+.button {
+  margin-right: 20px;
+  margin-bottom: 10px;
 }
