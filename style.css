@@ -2,6 +2,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  background-color: darksalmon;
+}
+
 .wrapper {
   background-color: rgb(233, 141, 141);
   display: flex;
@@ -12,6 +16,9 @@
   width: 640px;
   border: 2px solid black;
   border-radius: 20px;
+  box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .title {
@@ -25,7 +32,7 @@
   display: grid;
   width: 500px;
   height: 500px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .buttons {
@@ -37,4 +44,14 @@
 .button {
   margin-right: 20px;
   margin-bottom: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 3px;
+  box-shadow: 6px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 6px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 2px 5px 0px rgba(0, 0, 0, 0.75);
 }

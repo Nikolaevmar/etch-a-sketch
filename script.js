@@ -1,19 +1,14 @@
 const container = document.querySelector(`.gamepad`)
 
+
+//Events
 const btnBlack = document.getElementById('black');
 const btnRGB = document.getElementById('rgb');
 const btnClear = document.getElementById('clear');
 const btnChangeSize = document.getElementById('cSize');
 
-const divSize = prompt('Enter a number between 4 and 32')
 
-if(divSize >= 4 && divSize <= 32){
-    createDivs(divSize,divSize)
-}else{
-    alert('Error, reloading the page...');
-    location.reload();
-}
-
+//Starting structure of the gamepad
 function createDivs(col , rows) {
     for(let i = 0;i < (col * rows); i++) {
         const div = document.createElement('div') 
@@ -23,9 +18,9 @@ function createDivs(col , rows) {
         container.appendChild(div).classList.add('box')
     }
 }
+createDivs(16,16)
 
-
-
+//Black color
 function blackColor(){
     const boxes = container.querySelectorAll('.box');
     btnBlack.addEventListener('click', () => {
@@ -36,6 +31,7 @@ function blackColor(){
 }
 blackColor();
 
+//RGB color
 function rgbColor(){
     const boxes = container.querySelectorAll('.box');
     btnRGB.addEventListener('click', () => {
@@ -49,6 +45,7 @@ function rgbColor(){
 }
 rgbColor();
 
+//Function to clear the board
 function clear() {
  const boxes = container.querySelectorAll('.box');
  btnClear.addEventListener('click', () => {
@@ -57,9 +54,27 @@ function clear() {
 }
 clear()
 
+
+function reset(){
+    const boxes = container.querySelectorAll('.box')
+    boxes.forEach(box => box.remove());
+}
+
+//Changing the size of the gamepad based on an input.
 function changeSize(){
     btnChangeSize.addEventListener('click', () => {
-        location.reload();
-    })
+        let value = prompt('Size must be a number between 4 and 32');
+        if(value >= 4 && value <=32){
+            reset()
+            createDivs(value,value)
+            clear()
+            blackColor();
+            rgbColor();
+        }else{
+            alert('Enter a valid number between 4 and 32!')
+        }
+        }
+    )
 }
 changeSize();
+
