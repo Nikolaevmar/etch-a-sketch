@@ -4,6 +4,7 @@
 
 body {
   background-color: darksalmon;
+  overflow-y: hidden;
 }
 
 .wrapper {
@@ -22,9 +23,9 @@ body {
 }
 
 .title {
-  font-size: 2.5em;
+  font-size: 1.3em;
   color: white;
-  margin: 15px 0px 10px 0px;
+  margin: 10px 0px 10px 0px;
 }
 
 .gamepad {
